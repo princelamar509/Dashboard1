@@ -1,0 +1,262 @@
+/* Global reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.app {
+  background-color: #ffffff;
+  padding: 20px;
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+
+/* Weather Container */
+.weather-container {
+  width: 60%;
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background: url('https://easy-peasy.ai/cdn-cgi/image/quality=80,format=auto,width=700/https://fdczvxmwwjwpwbeeqcth.supabase.co/storage/v1/object/public/images/30062bdb-a709-4b20-9003-2ac35acbe30e/9481a023-1399-4558-9e79-50aa80040a8b.png') no-repeat center center;
+  background-size: cover;
+  text-align: center;
+  transform: matrix3d(1.1, 0, 0, 0, 0, 1.1, 0, 0, 0, 0, 1.1, 0, 0, 0, 0, 1);
+  color: #ffffff;
+  text-shadow: #730303 0 2px 4px;
+  grid-column: span 3;
+
+}
+
+.weather-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.weather-container h3 {
+  font-size: 1.5rem;
+  color: #ffffff;
+  font-weight: 900;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.679);
+  margin-bottom: 10px;
+  transform: matrix3d(1.1, 0, 0, 0, 0, 1.1, 0, 0, 0, 0, 1.1, 0, 0, 0, 0, 1);
+  text-shadow: #730303 0 2px 4px;
+}
+
+.weather-container p {
+  margin: 10px 0;
+  font-size: 1.2rem;
+  color: rgb(255, 255, 255);
+}
+
+.draggable-container {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.244);
+  cursor: move;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.device-control {
+  background-color: #f4f6f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.device-control h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+}
+
+.device {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.device p {
+  font-size: 1.1rem;
+  color: #333;
+  margin: 0 10px;
+}
+
+.control-btn, .temp-btn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.control-btn:hover, .temp-btn:hover {
+  background-color: #0056b3;
+}
+
+.temperature-control {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.temp-btn {
+  width: 40px;
+  height: 40px;
+  font-size: 1.2rem;
+}
+
+span {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-left: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+form div {
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  gap: 10px;
+  transition: background-color 0.3s;
+  margin-left: 20px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+}
+
+h3 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+
+.grid-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+}
+
+
+
+
+.svg-container {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-column: span 3; 
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+
+
+
+
+
+/* Media Query for small screens */
+@media (max-width: 768px) {
+  .app {
+    display: block;
+    padding: 10px;
+  }
+  .weather-container {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .draggable-container {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+.svg-container {
+  margin-top: -20px;
+  margin-bottom: -40px;
+overflow: hidden;
+}
+}

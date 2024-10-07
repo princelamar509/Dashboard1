@@ -1,0 +1,43 @@
+
+  
+  .flash-text {
+    font-size: 48px;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    stroke: #333;
+    stroke-width: 1px;
+    fill: url(#gradient);
+    text-anchor: middle;
+    text-align: center;
+    margin: 0 auto;
+    animation: flashAnimation 2s infinite;
+    grid-column: span 2;
+  }
+  
+  @keyframes flashAnimation {
+    0% {
+      opacity: 0.1;
+    }
+    25% {
+      opacity: 0.4;
+    }
+    50% {
+      opacity: 0.8;
+    }
+    75% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0.1;
+    }
+  }
+  
+
+  .preload {
+    text-align: center;
+    font-size: 48px;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    color: #333;
+    margin-top: 50vh;
+  }
