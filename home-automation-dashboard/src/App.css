@@ -24,7 +24,7 @@ body {
 }
 
 
-/* Weather Container */
+
 .weather-container {
   width: 60%;
   margin: 0 auto;
@@ -234,11 +234,6 @@ h3 {
 }
 
 
-
-
-
-
-/* Media Query for small screens */
 @media (max-width: 768px) {
   .app {
     display: block;

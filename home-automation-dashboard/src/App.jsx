@@ -34,16 +34,12 @@ const App = () => {
   return (
     preload ? <div className="preload"> Loading...</div> :
     <div className="app">
-
-  
       <div className="svg-container">
         <AnimateSVG />
       </div>
-
       <div className="weather-container">
         <WeatherComponent />
       </div>
-
       <Draggable>
         <div className="draggable-container grid-item">
           <DeviceInputForm onAddDevice={handleAddDevice} />
@@ -55,14 +51,11 @@ const App = () => {
           <DeviceControl addedDevices={devices} />
         </div>
       </Draggable>
-
       <Draggable>
         <div className="draggable-container grid-item">
           <D3Chart data={energyData} />
         </div>
       </Draggable>
-
-     
     </div>
   );
 };
